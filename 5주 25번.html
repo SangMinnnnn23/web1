@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <style type="text/css">
+    .divgroup {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: white;
+      padding-bottom: 3px;
+    }
+    .divgroup > div {
+      flex-basis: 100%;
+      max-width: 600px;
+      height: 130px;
+      background-color: white;
+      
+      margin-bottom: 3px;
+    }
+    @media screen and (max-width: 599px) {
+      .divgroup > div {
+        border: 3px dotted;
+      }
+      
+    }
+    @media screen and (min-width: 600px) and (max-width: 999px) {
+      .divgroup > div {
+        flex-basis: calc(50% - 3px);
+        background-color: blue;
+        border: none;
+      }
+      
+    }
+    @media screen and (min-width: 1000px) {
+      .divgroup > div {
+        flex-basis: calc(33.3333% - 3px);
+        background-color: yellow;
+        text-align: center;
+        margin-right: 3px
+      }
+      .divgroup {
+        justify-content: left;
+        border: none;
+        padding-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="divgroup">
+    <div>1번 영역</div>
+    <div>2번 영역</div>
+    <div>3번 영역</div>
+    <div>4번 영역</div>
+    <div>5번 영역</div>
+  </div>
+</body>
+</html>
