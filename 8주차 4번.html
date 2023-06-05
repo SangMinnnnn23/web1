@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body> 
+<script type="text/javascript">
+const rows = parseInt(prompt("행 수를 입력하세요:"));
+const columns = parseInt(prompt("열 수를 입력하세요:"));
+function drawTable(rows, columns) { 
+  let table = "<table>"; 
+  for (let i = 0; i < rows; i++) {   
+    table += "<tr>";   
+    for (let j = 0; j < columns; j++) {     
+      table += "<td>셀</td>";
+    }    
+    table += "</tr>";
+  } 
+  table += "</table>";
+  document.write(table);
+}
+drawTable(rows, columns);
+</script>
+</body>
+</html>
